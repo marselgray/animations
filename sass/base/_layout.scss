@@ -1,0 +1,36 @@
+.main{
+
+	max-width: 100rem;
+	margin: 0 auto;
+	background: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
+	color: $white;
+
+	.header{
+		text-align: center;
+		padding: 5rem 0;
+	}
+
+	.animations{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		background-color: $black;
+
+		@include breakpoint(medium){
+			flex-direction: row;
+
+		}
+
+		&--section{
+			height: 150px;
+			flex: 1 1 20rem;
+			background: $black;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border: 1px solid $white;
+		}
+	}
+
+}
