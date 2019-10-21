@@ -23,13 +23,14 @@
 		}
 
 		&--section{
-			height: 150px;
+			height: 250px;
 			flex: 1 1 20rem;
 			background: $black;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			border: 1px solid $white;
+			position: relative;
 		}
 	}
 

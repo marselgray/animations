@@ -1,0 +1,51 @@
+// Animation 2
+.circle{
+
+	&--loader{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 150px;
+		height: 150px;
+
+		&__container{
+			border-style: solid;
+			border-color: $white;
+			border-radius: 50%;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+
+		&__container1 {
+			width: 150px;
+			height: 150px;
+			animation:  circleRotation 5s linear infinite; 
+		}
+
+		&__container2 {
+			width: 120px;
+			height: 120px;
+			animation:  circleRotation 5s linear infinite; 
+		}
+
+		&__container3 {
+			width: 90px;
+			height: 90px;
+			animation:  circleRotation 5s linear infinite; 
+		}
+
+		&__container4 {
+			width: 60px;
+			height: 60px;
+			animation:  circleRotation 5s linear infinite; 
+		}
+	}
+}
