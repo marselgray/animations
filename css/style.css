@@ -50,6 +50,14 @@ body {
   100% {
     transform: rotate(180deg); } }
 
+@keyframes loadingBar {
+  0% {
+    width: 5%; }
+  50% {
+    width: 100%; }
+  100% {
+    width: 5%; } }
+
 .circle--loader {
   position: absolute;
   top: 50%;
@@ -59,7 +67,7 @@ body {
   height: 150px; }
   .circle--loader__container {
     border-style: solid;
-    border-color: #fff;
+    border-color: #df5a49;
     border-radius: 50%;
     border-top-color: transparent;
     border-bottom-color: transparent;
@@ -85,6 +93,29 @@ body {
     width: 60px;
     height: 60px;
     animation: circleRotation 5s linear infinite; }
+
+.bar--container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.bar--loading {
+  position: relative;
+  background-color: blue;
+  min-width: 13rem;
+  min-height: 1rem;
+  border-radius: 1rem; }
+  .bar--loading::after {
+    content: '';
+    height: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    background-color: orangered;
+    animation: loadingBar 2s ease-out 0s infinite; }
 
 .underline--link {
   text-align: center; }

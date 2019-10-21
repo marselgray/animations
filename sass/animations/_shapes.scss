@@ -11,7 +11,7 @@
 
 		&__container{
 			border-style: solid;
-			border-color: $white;
+			border-color: #df5a49;
 			border-radius: 50%;
 			border-top-color: transparent;
 			border-bottom-color: transparent;
@@ -47,5 +47,39 @@
 			height: 60px;
 			animation:  circleRotation 5s linear infinite; 
 		}
+	}
+}
+
+
+// Animation 3
+
+.bar{
+
+	&--container{
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&--loading{
+		position: relative;
+		background-color: blue;
+		min-width: 13rem;
+		min-height: 1rem;
+		border-radius: 1rem;
+
+		&::after {
+		content: '';
+		height: 100%;
+		border-radius: 1rem;
+		position: absolute;
+		top:0;
+		width:0%;
+		background-color: orangered;
+		animation: loadingBar 2s ease-out 0s infinite;
+		
+		}	
 	}
 }
