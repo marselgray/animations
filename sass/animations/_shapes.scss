@@ -83,3 +83,36 @@
 		}	
 	}
 }
+
+
+
+// Animation 4
+.gear{
+
+	&--container{
+		height: 100%;
+		background: $white;
+	}
+
+	&--top{
+		animation-name: ckw;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		transform-origin: 50% 50%;
+		display: inline-block;
+		animation-timing-function: linear;
+	}
+
+	&--bottom{
+		animation-name: ccw;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		transform-origin: 50% 50%;
+		display: inline-block;
+		animation-timing-function: linear;
+		top: 100px;
+		position: absolute;
+		top: 70px;
+		left: 50px;
+	}
+}

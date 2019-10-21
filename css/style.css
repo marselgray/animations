@@ -58,6 +58,18 @@ body {
   100% {
     width: 5%; } }
 
+@keyframes ckw {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes ccw {
+  0% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(0deg); } }
+
 .circle--loader {
   position: absolute;
   top: 50%;
@@ -116,6 +128,30 @@ body {
     width: 0%;
     background-color: orangered;
     animation: loadingBar 2s ease-out 0s infinite; }
+
+.gear--container {
+  height: 100%;
+  background: #fff; }
+
+.gear--top {
+  animation-name: ckw;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  display: inline-block;
+  animation-timing-function: linear; }
+
+.gear--bottom {
+  animation-name: ccw;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  display: inline-block;
+  animation-timing-function: linear;
+  top: 100px;
+  position: absolute;
+  top: 70px;
+  left: 50px; }
 
 .underline--link {
   text-align: center; }
