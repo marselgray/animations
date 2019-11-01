@@ -188,6 +188,13 @@ body {
   top: 7rem;
   left: 5rem; }
 
+.barloader svg {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%); }
+  .barloader svg path, .barloader svg rect {
+    fill: #FF6700; }
+
 .underline--link {
   text-align: center; }
   .underline--link a {

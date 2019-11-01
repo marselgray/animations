@@ -116,3 +116,18 @@
 		left: 5rem;
 	}
 }
+
+
+// Animation 6 
+.barloader{
+	svg{
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+
+		path, rect{
+			fill: #FF6700;
+
+		}
+	}
+}
