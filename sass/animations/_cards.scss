@@ -40,6 +40,8 @@
 
 .transitionimage{
 
+	cursor: pointer;
+
 	&:hover{
 
 		.transitionimage--content{
@@ -49,5 +51,66 @@
 		.transitionimage--image{
 			transform: scale(0.9);
 		}
+	}
+}
+
+
+// Animation 8
+.btn{
+
+	&--flex{
+		min-height: 30vh;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		font-size: 2rem;
+
+		&__bttn{
+			color: $rose;
+			text-decoration: none;
+			transition:0.3s ease all;
+
+			font-size:18px;
+			letter-spacing:2px;
+			text-transform:uppercase;
+			display:inline-block;
+			text-align:center;
+			width: 90%;
+			font-weight:bold;
+			padding:14px 0px;
+			border:3px solid $rose;
+			border-radius:2px;
+			position:relative;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+
+			z-index: 10;
+			&:hover, &:active{
+				color:#FFF;
+			}
+
+			&::before{
+				transition:0.5s all ease;
+				position:absolute;
+				top:0;
+				left:50%;
+				right:50%;
+				bottom:0;
+				opacity:0;
+				content:'';
+				background-color: $rose;
+				z-index:-2;
+			}
+
+		}
+	}
+}
+
+.btn--flex__bttn:hover{
+
+	&::before{
+		transition:0.5s all ease;
+		left:0;
+		right:0;
+		opacity:1;
 	}
 }
