@@ -114,3 +114,77 @@
 		opacity:1;
 	}
 }
+
+
+// Animation 9
+.accordian{
+	font-size: 16px;
+	background: #dce7eb !important;
+	color: rgba(48,69,92,0.8);
+	justify-content: flex-start !important;
+	padding: 1rem;
+
+	&--input{
+		display: none;
+	}
+
+	&--heading{
+		color: rgba(255,104,115,1);
+		margin: 1rem 0 2rem 0;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&--content{
+		opacity: 0;
+		transition: all 0.5s ease-in-out
+	}
+
+	.i--container{
+		position: relative;
+	}
+
+	i{
+		position: absolute;
+		transform: translate( -6px , 0 );
+		margin-top: 5px;
+		right: 0;
+		transition: all 0.5s ease-in-out;
+
+		&::before , &::after{
+			content: "";
+			position: absolute;
+			background-color: rgba(255,104,115,1);
+			width: 3px;
+			height: 9px;
+		}
+
+		&:before {
+			transform: translate( -2px , 0 ) rotate( -45deg );
+		}
+
+		&::after{
+			transform: translate( 2px , 0 ) rotate( 45deg )
+		}
+			
+	}
+}
+
+.accordian--input:checked ~ .accordian--content{
+	opacity: 1;
+}
+
+.accordian--input:checked ~ .accordian--heading{
+
+	i{
+		&::before {
+			transform: translate( -2px , 0 ) rotate( 45deg );
+		}
+	
+		&::after{
+			transform: translate( 2px , 0 ) rotate( -45deg )
+		}
+	}
+
+}

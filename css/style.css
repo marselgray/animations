@@ -121,6 +121,51 @@ body {
   right: 0;
   opacity: 1; }
 
+.accordian {
+  font-size: 16px;
+  background: #dce7eb !important;
+  color: rgba(48, 69, 92, 0.8);
+  justify-content: flex-start !important;
+  padding: 1rem; }
+  .accordian--input {
+    display: none; }
+  .accordian--heading {
+    color: #ff6873;
+    margin: 1rem 0 2rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; }
+  .accordian--content {
+    opacity: 0;
+    transition: all 0.5s ease-in-out; }
+  .accordian .i--container {
+    position: relative; }
+  .accordian i {
+    position: absolute;
+    transform: translate(-6px, 0);
+    margin-top: 5px;
+    right: 0;
+    transition: all 0.5s ease-in-out; }
+    .accordian i::before, .accordian i::after {
+      content: "";
+      position: absolute;
+      background-color: #ff6873;
+      width: 3px;
+      height: 9px; }
+    .accordian i:before {
+      transform: translate(-2px, 0) rotate(-45deg); }
+    .accordian i::after {
+      transform: translate(2px, 0) rotate(45deg); }
+
+.accordian--input:checked ~ .accordian--content {
+  opacity: 1; }
+
+.accordian--input:checked ~ .accordian--heading i::before {
+  transform: translate(-2px, 0) rotate(45deg); }
+
+.accordian--input:checked ~ .accordian--heading i::after {
+  transform: translate(2px, 0) rotate(-45deg); }
+
 @keyframes circleRotation {
   0% {
     transform: rotate(180deg); }
