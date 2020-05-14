@@ -48,4 +48,20 @@
 // Animation 7
 @keyframes spin {
 	100% { transform: rotate(360deg); }
-  }
+}
+
+// Animation 10
+@keyframes mouse {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}

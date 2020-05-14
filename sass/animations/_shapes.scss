@@ -180,3 +180,82 @@
 		}
 	}
 }
+
+
+// Animation 10
+.mouse{
+
+	&--animated{
+		border-radius: 3rem;
+		width: 2.25rem;
+		height: 5rem;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		box-shadow: $white -2px -2px 0px 0px, $white 2px -2px 0 0;
+		padding-top: 41px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			background: $white;
+			border-radius: 1rem;
+			width: 0.4rem;
+			height: 1.2rem;
+			left: 50%;
+			transform: translate(-50%);
+			top: 1rem;
+		}
+	}
+
+	&--line{
+		background: $white;
+		width: calc(100% - 1rem);
+		height: 3px;
+		margin: 3px auto;
+		animation-name: mouse;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+
+		&:nth-child(1n+1) {
+			animation-delay: 0s;
+		}
+		&:nth-child(1n+2) {
+			animation-delay: 0.25s;
+		}
+		&:nth-child(1n+3) {
+			animation-delay: 0.5s;
+		}
+	}
+
+	&--arrow{
+		animation-name: mouse;
+		animation-delay: 0.75s;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		&:after {
+			content: '';
+			border: 0.6rem solid $white;
+			transform: rotate(45deg);
+			display: inline-block;
+			border-left-color: transparent;
+			border-top-color: transparent;
+			height: 0;
+			width: 0;
+			top: -8px;
+			position: relative;
+		}
+	}
+
+	&--shaft{
+		width: calc(100% - 1rem);
+		background: $white;
+		height: 3px;
+		margin: 0 auto;
+	}
+}
