@@ -1,7 +1,7 @@
 {
   "name": "animations",
   "version": "1.0.0",
-  "description": "my favorit animations",
+  "description": "my favorite animations",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
