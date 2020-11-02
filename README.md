@@ -13,3 +13,5 @@ These are some of my favorite animations I've built over the years. They use pur
 7. Spinning Sun
 8. Button hover effect
 9. Text toggle with checkbox hack
+10. Computer mouse
+11. Hamburger menu animation

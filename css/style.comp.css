@@ -35,7 +35,6 @@ body {
     .main .animations--section {
       height: 250px;
       flex: 1 1 20rem;
-      background: #000;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -397,6 +396,38 @@ body {
   background: #fff;
   height: 3px;
   margin: 0 auto; }
+
+.toggle {
+  background-color: #fff;
+  align-items: center; }
+  .toggle--svg {
+    cursor: pointer;
+    transition: transform 400ms; }
+  .toggle--line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 5.5;
+    stroke-linecap: round; }
+  .toggle--top {
+    stroke-dasharray: 40 160; }
+  .toggle--middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms; }
+  .toggle--bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms; }
+
+.toggle--svg.active {
+  transform: rotate(45deg); }
+  .toggle--svg.active .toggle--top {
+    stroke-dashoffset: -64px; }
+  .toggle--svg.active .toggle--middle {
+    transform: rotate(90deg); }
+  .toggle--svg.active .toggle--bottom {
+    stroke-dashoffset: -64px; }
 
 .underline--link {
   text-align: center; }
